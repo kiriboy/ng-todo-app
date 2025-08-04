@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,6 +6,10 @@ import { Component, signal } from '@angular/core';
   styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent {
+
+  value = 4
+
+  @Output() aName = new EventEmitter<any>()
 
   
   counterValue = signal(0)

@@ -1,0 +1,16 @@
+.container{
+
+    display: flex;
+    margin: auto;
+    text-align: center;
+    background-color: 'red';
+    border: 1px solid #df5b52;
+    border-radius: 8px;
+    justify-content: space-around;
+
+    .not-found-text{
+        color: black;
+        padding: 2rem;
+        text-align: center;
+    }
+}

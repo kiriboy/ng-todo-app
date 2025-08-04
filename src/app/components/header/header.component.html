@@ -1,11 +1,14 @@
 <header>
     <nav>
-        <span routerLink="/">
+        <span routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             {{title()}}
         </span>
         <ul>
             <li routerLink="todos">
                 Todos
+            </li>
+            <li routerLink="form">
+                Form
             </li>
         </ul>
     </nav>

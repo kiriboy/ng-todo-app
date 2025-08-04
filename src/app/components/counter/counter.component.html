@@ -1,7 +1,20 @@
-<p>Counter value : {{counterValue()}}</p>
+<p appHighlite [defaultColor]="'yellow'" [hightColor]="'red'">Counter value : {{counterValue()}}</p>
 
 <div>
     <button (click)="increment()">Increment</button>
     <button (click)="reset()">Reset</button>
     <button (click)="decrement()">Decrement</button>
+</div>
+
+
+<br>
+
+
+
+
+<div [ngSwitch]="counterValue()">
+    <p *ngSwitchCase="5">value is 5</p>
+    <p *ngSwitchCase="4">value is 4</p>
+    <p *ngSwitchCase="3">value is 3</p>
+    <p *ngSwitchDefault>value is All</p>
 </div>

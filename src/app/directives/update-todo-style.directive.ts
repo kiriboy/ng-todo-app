@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, Renderer2, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { Directive, ElementRef, Input, Renderer2, OnChanges, SimpleChanges, inject, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appUpdateTodoStyle]'
@@ -7,7 +7,8 @@ import { Directive, ElementRef, Input, Renderer2, OnChanges, SimpleChanges, inje
 // implements OnChanges in order to use ngOnChanges
 export class UpdateTodoStyleDirective implements OnChanges {
 
-  @Input() isComplete!: boolean;
+
+  @Input() isComplete: boolean = false;
 
   // constructor(private el: ElementRef, private renderer: Renderer2) {}
   private el = inject(ElementRef)
